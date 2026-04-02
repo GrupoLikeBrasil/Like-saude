@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Menu, X, LogIn } from "lucide-react";
-import logo from "@/assets/like-saude-logo.png";
+import { Menu, X, Heart } from "lucide-react";
 
 const navItems = ["Sobre", "Como Funciona", "Planos", "Seja Consultor", "Contato"];
 
@@ -25,7 +24,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logo} alt="Like Saúde" className="w-8 h-8" />
+          <Heart className="w-7 h-7 text-primary" />
           <span className="text-xl font-bold text-primary">LIKE SAÚDE</span>
         </div>
 
