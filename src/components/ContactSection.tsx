@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   const [interest, setInterest] = useState("cliente");
@@ -40,22 +40,29 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-bold text-foreground">WhatsApp</h4>
-                <p className="text-primary font-medium">(27) 9 8894-9999</p>
-                <p className="text-sm text-muted-foreground">Atendimento rápido via WhatsApp</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <h4 className="font-bold text-foreground">E-mail</h4>
                 <p className="text-primary font-medium">contato@likebrasil.com.br</p>
-                <p className="text-sm text-muted-foreground">Resposta em até 24h</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <Instagram className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-foreground">Instagram</h4>
+                <a href="https://instagram.com/likebrasil" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Instagram</a>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-foreground">Telefone</h4>
+                <p className="text-primary font-medium">(27) 99822-0104</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -63,8 +70,8 @@ const ContactSection = () => {
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground">Atuação</h4>
-                <p className="text-muted-foreground">Presente em todo o Brasil<br />Empreendedores em mais de 500 cidades</p>
+                <h4 className="font-bold text-foreground">Localização</h4>
+                <p className="text-muted-foreground">Guarapari/ES • Cachoeiro de Itapemirim/ES</p>
               </div>
             </div>
           </div>
