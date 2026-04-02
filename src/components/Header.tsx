@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Menu, X, LogIn } from "lucide-react";
-import logo from "@/assets/like-saude-logo.png";
+import { Menu, X, Heart } from "lucide-react";
 
 const navItems = ["Sobre", "Como Funciona", "Planos", "Seja Consultor", "Contato"];
 
