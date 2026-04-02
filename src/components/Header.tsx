@@ -57,10 +57,6 @@ const Header = () => {
               {item}
             </button>
           ))}
-          <button className="flex items-center gap-1 text-sm font-medium text-primary">
-            <LogIn className="w-4 h-4" />
-            Login
-          </button>
         </div>
       )}
     </header>
