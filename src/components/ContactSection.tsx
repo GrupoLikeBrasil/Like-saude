@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   const [interest, setInterest] = useState("cliente");
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <section id="contato" className="py-20 bg-secondary">
@@ -26,11 +30,52 @@ const ContactSection = () => {
               ))}
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Nome completo" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
-              <input type="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
-              <input type="tel" placeholder="Telefone / WhatsApp" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
-              <textarea placeholder="Mensagem" rows={4} className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none resize-none" />
+            <form
+              className="space-y-4"
+              onSubmit={(e: FormEvent<HTMLFormElement>) => {
+                e.preventDefault();
+                const targetPhoneE164 = "5527998220104";
+                const interestLabel =
+                  interest === "cliente" ? "Quero ser cliente LIKE SAÚDE" : interest === "empreendedor" ? "Quero empreender" : "Tenho dúvidas";
+                const text = `Olá! Me chamo ${fullName || "(sem nome)"}.
+Interesse: ${interestLabel}
+E-mail: ${email || "(sem e-mail)"} 
+Telefone/WhatsApp: ${phone || "(sem telefone)"}
+
+Mensagem:
+${message || "(vazia)"}`;
+                const url = `https://wa.me/${targetPhoneE164}?text=${encodeURIComponent(text)}`;
+                window.open(url, "_blank", "noopener,noreferrer");
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Nome completo"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none"
+              />
+              <input
+                type="email"
+                placeholder="E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none"
+              />
+              <input
+                type="tel"
+                placeholder="(DDD) Telefone / WhatsApp"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none"
+              />
+              <textarea
+                placeholder="Mensagem"
+                rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none resize-none"
+              />
               <button type="submit" className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-accent transition-colors">
                 Enviar Mensagem
               </button>
@@ -62,7 +107,14 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-bold text-foreground">Telefone</h4>
-                <p className="text-primary font-medium">(27) 99822-0104</p>
+                <a
+                  href="https://wa.me/5527998220104"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium hover:underline"
+                >
+                  (27) 99822-0104
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
