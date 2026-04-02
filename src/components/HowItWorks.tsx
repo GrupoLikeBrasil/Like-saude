@@ -1,10 +1,10 @@
-import { Stethoscope, Video, Users, TrendingUp } from "lucide-react";
+import { Leaf, Sparkles, Users, TrendingUp } from "lucide-react";
 
 const features = [
-  { icon: Stethoscope, title: "Consulta Presencial", text: "Acesso a consultas médicas com preços populares em nossa rede credenciada" },
-  { icon: Video, title: "Telemedicina", text: "Pronto atendimento ou agendada. Clínica Geral + 35 Especialidades. 7 dias por semana 24h por dia" },
-  { icon: Users, title: "Rede de Consultores", text: "Consultores qualificados que indicam nossos serviços e ganham comissões" },
-  { icon: TrendingUp, title: "Ganhos Escaláveis", text: "Sistema de remuneração transparente com adesão descomplicada e fácil duplicação" },
+  { icon: Leaf, title: "Produtos Naturais", text: "Linha completa de nutracêuticos, óleos ozonizados e suplementos de alta qualidade para sua saúde" },
+  { icon: Sparkles, title: "Beleza e Cosméticos", text: "Fragrâncias, linha capilar e cosméticos premium reconhecidos mundialmente" },
+  { icon: Users, title: "Rede de Empreendedores", text: "Comunidade de empreendedores independentes que crescem juntos com suporte e treinamento" },
+  { icon: TrendingUp, title: "100% de Lucro", text: "Revenda produtos com até 100% de lucro e conte com 10 formas de ganhos diferentes" },
 ];
 
 const HowItWorks = () => (
@@ -12,7 +12,7 @@ const HowItWorks = () => (
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">Como Funciona</h2>
       <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
-        A meohelp conecta pessoas a serviços de saúde acessíveis, oferecendo consultas presenciais, telemedicina e exames com preços populares.
+        A LIKE SAÚDE oferece produtos premium de saúde e bem-estar com um modelo de revenda simples, lucrativo e acessível para qualquer pessoa.
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {features.map((f) => {

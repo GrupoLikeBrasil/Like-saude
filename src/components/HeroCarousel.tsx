@@ -5,23 +5,23 @@ import heroImg from "@/assets/hero-doctor.jpg";
 const slides = [
   {
     icon: Shield,
-    title: "O problema no Brasil",
-    text: "75% da população brasileira está sem acesso a saúde privada devido ao alto custo. O SUS é gratuíto mas enfrenta superlotação e demora no atendimento",
+    title: "Saúde e Bem-Estar para Todos",
+    text: "A LIKE BRASIL promove saúde, bem-estar e qualidade de vida com produtos de alta qualidade e uma oportunidade de negócio única no mercado que mais cresce no mundo",
   },
   {
     icon: Heart,
-    title: "A solução meohelp",
-    text: "Conectamos pessoas a clínicas e serviços de saúde com preços acessíveis, gerando renda para quem indica e demanda sem custos para quem atende",
+    title: "A solução LIKE SAÚDE",
+    text: "Cuidamos da sua saúde com produtos naturais, nutracêuticos e soluções inovadoras que promovem bem-estar e qualidade de vida para você e sua família",
   },
   {
     icon: Building2,
-    title: "Clínicas Populares",
-    text: "Clínicas parceiras contam com uma poderosa rede de consultores independentes que atuam como promotores dos seus serviços",
+    title: "Mercado em Crescimento",
+    text: "O Brasil é líder mundial em consumo de produtos de bem-estar. A indústria faturou mais de R$ 96 bilhões — essa é sua chance de empreender nesse mercado gigante",
   },
   {
     icon: Users,
-    title: "Clientes e Consultores",
-    text: "Saúde acessível e renda extra em um só lugar. Nossa visão é ser a principal plataforma de saúde com impacto social positivo no Brasil",
+    title: "Empreenda com a LIKE BRASIL",
+    text: "Revenda produtos conhecidos mundialmente com até 100% de lucro. Construa seu próprio negócio na área de saúde e bem-estar com 10 formas de ganho diferentes",
   },
 ];
 
@@ -41,7 +41,7 @@ const HeroCarousel = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <img src={heroImg} alt="Healthcare" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+      <img src={heroImg} alt="Saúde e Bem-Estar" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-primary/80" />
 
       <div className="relative z-10 text-center text-primary-foreground max-w-3xl mx-auto px-4">
@@ -52,10 +52,10 @@ const HeroCarousel = () => {
         <p className="text-lg md:text-xl opacity-90 mb-10 leading-relaxed">{slide.text}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#contato" className="px-8 py-3 rounded-full border-2 border-primary-foreground text-primary-foreground font-semibold hover:bg-primary-foreground hover:text-primary transition-all">
-            Quero ser cliente
+            Quero conhecer os produtos
           </a>
           <a href="#consultor" className="px-8 py-3 rounded-full bg-primary-foreground text-primary font-semibold hover:bg-primary-foreground/90 transition-all">
-            Quero ser consultor
+            Quero empreender
           </a>
         </div>
       </div>
