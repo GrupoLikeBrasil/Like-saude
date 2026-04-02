@@ -39,10 +39,6 @@ const Header = () => {
               {item}
             </button>
           ))}
-          <button className="flex items-center gap-1 text-sm font-medium text-primary hover:text-accent transition-colors">
-            <LogIn className="w-4 h-4" />
-            Login
-          </button>
         </nav>
 
         <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
