@@ -1,18 +1,18 @@
 import { Target, Eye } from "lucide-react";
 
 const stats = [
-  { value: "10k+", label: "Clientes ativos" },
-  { value: "5k+", label: "Consultores" },
-  { value: "200+", label: "Cidades" },
-  { value: "98%", label: "Satisfação" },
+  { value: "50k+", label: "Empreendedores ativos" },
+  { value: "100+", label: "Produtos premium" },
+  { value: "500+", label: "Cidades atendidas" },
+  { value: "96Bi", label: "Mercado de bem-estar" },
 ];
 
 const AboutSection = () => (
   <section id="sobre" className="py-20 bg-background">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">Sobre a meohelp</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">Sobre a LIKE BRASIL</h2>
       <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
-        A meohelp é uma plataforma que conecta pessoas a clínicas e serviços de saúde com preços acessíveis, gerando renda para quem indica e demanda sem custos para quem atende.
+        A LIKE BRASIL é uma empresa que promove saúde e bem-estar através de produtos de alta qualidade, oferecendo uma oportunidade de negócio lucrativa para empreendedores independentes em todo o Brasil.
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
@@ -22,7 +22,7 @@ const AboutSection = () => (
           </div>
           <h3 className="text-xl font-bold text-foreground mb-3">Missão</h3>
           <p className="text-muted-foreground leading-relaxed">
-            Democratizar o acesso à saúde e gerar oportunidades de renda, conectando pessoas que precisam de cuidados médicos a clínicas parceiras e expandir nossa rede de consultores no Brasil.
+            Promover saúde, bem-estar e qualidade de vida através de produtos inovadores, gerando oportunidades de renda e transformando vidas com um modelo de negócio acessível e lucrativo.
           </p>
         </div>
         <div className="bg-secondary rounded-2xl p-8">
@@ -31,7 +31,7 @@ const AboutSection = () => (
           </div>
           <h3 className="text-xl font-bold text-foreground mb-3">Visão</h3>
           <p className="text-muted-foreground leading-relaxed">
-            Ser referência nacional em saúde acessível com impacto social positivo, criando uma rede sustentável que beneficia clientes, consultores e profissionais de saúde.
+            Ser referência nacional em saúde e bem-estar, liderando o mercado com produtos de excelência e uma rede de empreendedores que transforma vidas em todo o Brasil.
           </p>
         </div>
       </div>

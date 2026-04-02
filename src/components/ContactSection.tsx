@@ -13,7 +13,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
             <div className="flex gap-2 mb-6">
-              {["cliente", "consultor", "duvidas"].map((t) => (
+              {["cliente", "empreendedor", "duvidas"].map((t) => (
                 <button
                   key={t}
                   onClick={() => setInterest(t)}
@@ -21,7 +21,7 @@ const ContactSection = () => {
                     interest === t ? "bg-primary text-primary-foreground" : "bg-card text-foreground border border-border"
                   }`}
                 >
-                  {t === "cliente" ? "Quero ser cliente" : t === "consultor" ? "Quero ser consultor" : "Tenho dúvidas"}
+                  {t === "cliente" ? "Quero ser cliente" : t === "empreendedor" ? "Quero empreender" : "Tenho dúvidas"}
                 </button>
               ))}
             </div>
@@ -29,7 +29,7 @@ const ContactSection = () => {
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <input type="text" placeholder="Nome completo" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
               <input type="email" placeholder="E-mail" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
-              <input type="tel" placeholder="Telefone" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
+              <input type="tel" placeholder="Telefone / WhatsApp" className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none" />
               <textarea placeholder="Mensagem" rows={4} className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary outline-none resize-none" />
               <button type="submit" className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-accent transition-colors">
                 Enviar Mensagem
@@ -43,9 +43,9 @@ const ContactSection = () => {
                 <Phone className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground">Telefone</h4>
-                <p className="text-primary font-medium">(11) 9 98720-1566</p>
-                <p className="text-sm text-muted-foreground">Segunda a sexta, 9h às 17h</p>
+                <h4 className="font-bold text-foreground">WhatsApp</h4>
+                <p className="text-primary font-medium">(27) 9 8894-9999</p>
+                <p className="text-sm text-muted-foreground">Atendimento rápido via WhatsApp</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -54,7 +54,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-bold text-foreground">E-mail</h4>
-                <p className="text-primary font-medium">contato@meohelp.com.br</p>
+                <p className="text-primary font-medium">contato@likebrasil.com.br</p>
                 <p className="text-sm text-muted-foreground">Resposta em até 24h</p>
               </div>
             </div>
@@ -63,8 +63,8 @@ const ContactSection = () => {
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground">Endereço</h4>
-                <p className="text-muted-foreground">Avenida Paulista, 1636 - Sala 1504<br />São Paulo - SP</p>
+                <h4 className="font-bold text-foreground">Atuação</h4>
+                <p className="text-muted-foreground">Presente em todo o Brasil<br />Empreendedores em mais de 500 cidades</p>
               </div>
             </div>
           </div>
