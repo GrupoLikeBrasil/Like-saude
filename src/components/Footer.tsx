@@ -20,7 +20,7 @@ const Footer = () => (
           </svg>
           <span className="text-lg font-bold text-primary">LIKE SAÚDE</span>
         </div>
-        <p className="text-sm opacity-60">© 2025 LIKE BRASIL. Todos os direitos reservados.</p>
+        <p className="text-sm opacity-60">© 2026 LIKE SAÚDE. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

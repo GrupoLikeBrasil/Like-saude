@@ -1,18 +1,18 @@
-import { Leaf, Sparkles, Users, TrendingUp } from "lucide-react";
+import { Sun, Scale, Heart, RefreshCw } from "lucide-react";
 
 const features = [
-  { icon: Leaf, title: "Produtos Naturais", text: "Linha completa de nutracêuticos, óleos ozonizados e suplementos de alta qualidade para sua saúde" },
-  { icon: Sparkles, title: "Beleza e Cosméticos", text: "Fragrâncias, linha capilar e cosméticos premium reconhecidos mundialmente" },
-  { icon: Users, title: "Rede de Empreendedores", text: "Comunidade de empreendedores independentes que crescem juntos com suporte e treinamento" },
-  { icon: TrendingUp, title: "100% de Lucro", text: "Revenda produtos com até 100% de lucro e conte com 10 formas de ganhos diferentes" },
+  { icon: Sun, title: "Autocuidado Diário", text: "Pequenas escolhas e hábitos que fortalecem o cuidado com você todos os dias." },
+  { icon: Scale, title: "Equilíbrio da Rotina", text: "Mais consciência entre descanso, energia, foco e qualidade de vida." },
+  { icon: Heart, title: "Bem-estar Integral", text: "Um olhar mais completo para saúde, leveza e vitalidade." },
+  { icon: RefreshCw, title: "Constância e Leveza", text: "O bem-estar como parte natural da rotina, de forma simples e contínua." },
 ];
 
 const HowItWorks = () => (
   <section id="como-funciona" className="py-20 bg-secondary">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">Como Funciona</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-4">Como funciona</h2>
       <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
-        A LIKE SAÚDE oferece produtos premium de saúde e bem-estar com um modelo de revenda simples, lucrativo e acessível para qualquer pessoa.
+        A LIKE SAÚDE se conecta a um estilo de vida mais consciente, valorizando o autocuidado em diferentes momentos da rotina. A proposta é incentivar uma jornada de bem-estar baseada em equilíbrio, constância e atenção ao que faz bem para corpo e mente.
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {features.map((f) => {

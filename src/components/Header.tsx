@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Heart } from "lucide-react";
 
-const navItems = ["Sobre", "Como Funciona", "Planos", "Seja Consultor", "Contato"];
+const navItems = ["Sobre", "Como Funciona", "Pilares", "Experiência", "Contato"] as const;
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -12,11 +12,11 @@ const Header = () => {
     setOpen(false);
   };
 
-  const sectionMap: Record<string, string> = {
+  const sectionMap: Record<(typeof navItems)[number], string> = {
     Sobre: "sobre",
     "Como Funciona": "como-funciona",
-    Planos: "planos",
-    "Seja Consultor": "consultor",
+    Pilares: "pilares",
+    Experiência: "experiencia",
     Contato: "contato",
   };
 
@@ -32,6 +32,7 @@ const Header = () => {
           {navItems.map((item) => (
             <button
               key={item}
+              type="button"
               onClick={() => scrollTo(sectionMap[item])}
               className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
             >
@@ -40,7 +41,7 @@ const Header = () => {
           ))}
         </nav>
 
-        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button type="button" className="lg:hidden text-foreground" onClick={() => setOpen(!open)} aria-label={open ? "Fechar menu" : "Abrir menu"}>
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -50,6 +51,7 @@ const Header = () => {
           {navItems.map((item) => (
             <button
               key={item}
+              type="button"
               onClick={() => scrollTo(sectionMap[item])}
               className="block w-full text-left text-sm font-medium text-foreground/80 hover:text-primary"
             >
